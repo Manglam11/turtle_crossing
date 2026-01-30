@@ -14,12 +14,10 @@ class Player(Turtle):
         self.goto(STARTING_POSITION)
         self.setheading(90)
 
-    def player_move(self):
+    def up(self):
         self.fd(MOVE_DISTANCE)
         if self.ycor() == FINISH_LINE_Y:
             self.goto(STARTING_POSITION)
-
-
 
 
 # player = Player()
