@@ -16,7 +16,7 @@ screen.onkey(player.up, "Up")
 
 game_is_on = True
 while game_is_on:
-    time.sleep(0.1)
+    time.sleep(car_manager.car_speed)
     car_manager.create_car()
     car_manager.car_move()
     #detecting collision of car and turtle
@@ -26,8 +26,10 @@ while game_is_on:
             game_is_on = False
 
     #detecting turtle crossing
-    if player.ycor() > 300:
-        print("turtle crossed")
+    if player.is_at_finish_line():
+        player.go_to_start()
+        car_manager.increase_car_speed()
+
 
     screen.update()
 
