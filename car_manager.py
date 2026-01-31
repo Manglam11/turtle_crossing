@@ -5,7 +5,6 @@ COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 100
 screen = Screen()
-
 class CarManager:
     # pass
     def __init__(self):
@@ -28,6 +27,9 @@ class CarManager:
     def car_move(self):
         for car in self.all_cars:
             car.fd(STARTING_MOVE_DISTANCE)
+
+
+
 
 
 # car = CarManager()
